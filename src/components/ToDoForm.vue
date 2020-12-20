@@ -1,15 +1,17 @@
 <template>
-  <form @submit.prevent="onSubmit">
-    <label for="new-todo-input"> What needs to be done? </label>
-    <input
-      type="text"
-      id="new-todo-input"
-      name="new-todo"
-      autocomplete="off"
-      v-model.lazy.trim="label"
-    />
-    <button type="submit">Add</button>
-  </form>
+  <div class="form">
+    <form @submit.prevent="onSubmit">
+      <label for="new-todo-input"> What needs to be done? </label><br>
+      <input
+        type="text"
+        id="new-todo-input"
+        name="new-todo"
+        autocomplete="off"
+        v-model.lazy.trim="label"
+      />
+      <button type="submit">Add</button>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -32,3 +34,24 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input{
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 10px;
+}
+
+.form button{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  margin-top: 10px;
+  
+}
+</style>
