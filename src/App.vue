@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>My To-Do-List</h1>
+    <h1>To-Do-List</h1>
     <ToDoForm @todo-added="addToDo" />
     <ul aria-labelledby="list-summary" class="stack-large">
       <li v-for="item in TodoItems" :key="item.id">
@@ -130,8 +130,9 @@ export default {
 }
 /* End global styles */
 #app {
-  background: #fff;
+  background: #eee;
   margin: 2rem 0 4rem 0;
+  border-radius: 10px;
   padding: 1rem;
   padding-top: 0;
   position: relative;

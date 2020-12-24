@@ -1,6 +1,11 @@
 <template>
   <div class="custom-checkbox">
-    <input type="checkbox" id="todo-item" v-bind:checked="isDone" class="checkbox" />
+    <input
+      type="checkbox"
+      id="todo-item"
+      v-bind:checked="isDone"
+      class="checkbox"
+    />
     <!-- <input type="checkbox" id="todo-item" :checked="isDone" /> -->
     <!-- <label for="todo-item">{{ label }}</label> -->
     <label :for="id" class="checkbox-label">{{ label }}</label>
@@ -25,7 +30,9 @@ export default {
 </script>
 
 <style scoped>
-  .custom-checkbox > .checkbox-label {
+
+
+.custom-checkbox > .checkbox-label {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
