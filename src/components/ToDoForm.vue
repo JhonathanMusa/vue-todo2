@@ -2,7 +2,9 @@
   <div class="form">
     <form @submit.prevent="onSubmit">
       <h2 class="label-wrapper">
-      <label for="new-todo-input" class="label__lg"> What needs to be done? </label>
+        <label for="new-todo-input" class="label__lg">
+          What needs to be done?
+        </label>
       </h2>
       <input
         type="text"
@@ -16,13 +18,17 @@
     </form>
   </div>
 </template>
-
+     
 <script>
 export default {
   name: "ToDoForm",
+  data() {
+    return {
+      label: "",
+    };
+  },
   methods: {
     onSubmit() {
-      // console.log("Label value: ", this.label);
       if (this.label === "") {
         return;
       }
@@ -30,31 +36,5 @@ export default {
       this.label = "";
     },
   },
-  data() {
-    return {
-      label: "",
-    };
-  },
 };
 </script>
-
- <style scoped>
-/*.form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form input{
-  border-radius: 5px;
-  border: 1px solid #aaa;
-  padding: 10px;
-}
-
-.form button{
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #aaa;
-  margin-top: 10px;
-  
-} */
-</style> 

@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import uniqueid from "lodash.uniqueid";
 export default {
   props: {
     label: { required: true, type: String },
@@ -23,15 +22,12 @@ export default {
   data() {
     return {
       isDone: this.done,
-      /* id: uniqueid("todo-"), */
     };
   },
 };
 </script>
 
 <style scoped>
-
-
 .custom-checkbox > .checkbox-label {
   font-family: Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
