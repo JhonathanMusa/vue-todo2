@@ -1,4 +1,5 @@
-# vue_mozilla
+# vue_todo
+Vue To-do build with vuejs cli
 
 ## Project setup
 ```
